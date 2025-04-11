@@ -8,6 +8,6 @@ test:
 	@CGO_ENABLED=0 GOOS=windows go build -ldflags "-s -w" -trimpath -o tests/embedemo_pe tests/embedemo.go
 
 	@echo "unit test"
-	@go run main.go -target ./tests/embedemo_elf -vaddr 0x00000000000F8F60
-	@go run main.go -target ./tests/embedemo_macho -vaddr 0x00000001000EAA00
-	@go run main.go -target ./tests/embedemo_pe -vaddr 0x00000001000F3B00
+	@go run main.go -target ./tests/embedemo_elf -vaddr 0x00000000000F8F60 -output out/elf
+	@go run main.go -target ./tests/embedemo_macho -vaddr 0x00000001000EAA00 -output out/macho
+	@go run main.go -target ./tests/embedemo_pe -vaddr 0x00000001000F3B00 -output out/pe

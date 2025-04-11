@@ -16,7 +16,7 @@ It provides a simple way for developers and reverse engineers to analyze and rec
 
 2. Extract embedded files from a Go binary:
 ```bash
-gee -target ./tests/embedemo_elf -vaddr 0x00000000000F8F60
+gee -target -target ./tests/embedemo_macho -vaddr 0x00000001000EAA00
 ```
 
 ## References
